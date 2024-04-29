@@ -8,6 +8,7 @@ var footer = document.querySelector("footer");
 console.log(footer.innerText)
 const ul = document.querySelector('ul')
 const ulContent =  Array.from(ul.children);
+console.log(ulContent,"io")
 ulContent.forEach(child =>{
     const duplicate = child.cloneNode(true)
     duplicate.setAttribute("aria-hidden",true);
@@ -21,7 +22,7 @@ cw.classList.add('cw')
 p.classList.add('footer')
 footer.innerText=""
 footer.appendChild(p);
-//footer.appendChild(cw)
+footer.appendChild(cw)
 
 var button = document.createElement('Button')
 
