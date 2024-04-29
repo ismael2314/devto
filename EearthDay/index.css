@@ -1,0 +1,231 @@
+:root{
+    --txt-color:#7ea7ff;
+    --paragraph:#06070B;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+}
+@keyframes scrollAnime {
+    to{
+        transform: translateY(calc(var(--parallax-speed)*200px));
+    }
+}
+body{
+    background-position: fixed;
+} 
+html{
+    --overflow:hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    background-color: inherit;
+    width: 0em;
+}
+header{
+    display: flex;
+    grid-template-areas: "stack";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    color: aliceblue;
+    perspective: 100px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    background: url('img/parralex/earth.jpg');
+    background-size: cover;
+}
+header  > h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+    width: 550px;
+    justify-content: center;
+    z-index: 1;
+}
+
+h2{
+    color: var(--txt-color);  
+}
+p{
+    color: var(--paragraph);
+}
+section{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 0;
+}
+section article{
+    padding: 1em;
+    margin: .5em;
+    width: 960px;
+    align-content: center;
+}
+section article:nth-child(3){
+    width: max-content;
+    overflow-x: hidden;
+    -webkit-mask: linear-gradient(90deg,transparent,white 20%,white 80%,transparent);
+    mask: linear-gradient(90deg,black,white);
+}
+section article h2{
+    font-size: 3em;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+
+}
+section article p{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    align-self: right;
+    border-radius: .5em;
+    font-weight: thin;
+    color: var(--paragraph);
+
+}
+@keyframes scroll {
+    to{
+        transform: translate(calc(-50% - 1rem));
+    }
+}
+ul{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 2.1em;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+    animation-direction: forward;
+}
+ul li{
+    padding: 1em;
+    width: 400px;
+    height: 200px;
+    border:1px solid rgb(228, 227, 227);
+    margin: 0.5em;
+    border-radius: .2em;
+    text-align: center;
+    flex-grow:1;
+    transition: all .2s;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    transform: scale(1);
+    
+}
+ul li:first-child::content{
+    text-align: center;
+}
+ul:hover{
+    animation-play-state: paused;
+}
+ul li:hover{
+    position: relative;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgb(228, 227, 227);
+    z-index: 100;
+    border-color: var(--txt-color);
+
+}
+.action-call,.testimonial,.events{
+     text-align: center;
+     display: block;
+     border:1px solid #578F52;
+     padding: 2em;
+     flex-grow: 1;
+     border-radius: 5px;
+}
+.action-call{
+    width: 80%;
+    margin: auto;
+}
+.action-call a{
+    background-color: #1b4752;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    transition: all .5s;
+}
+.action-call a:hover{
+    background-color: white;
+    border-color: #1a5156;
+    color: #1a5156;
+}
+.action-call h2,.action-call p{
+    padding: 8px;
+    margin: 8px;
+}
+.action-call h2, .testimonial h2, .events h2{
+    font-size: 2em;
+}
+.testimonial, .events{
+    margin: 1em;
+    border-width: 0pc;
+}
+.testimonial p{
+    font-size: 1.5em;
+}
+.events a{
+    text-decoration: underline;
+    color: #3b83d8;
+    text-transform: capitalize;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.events a:hover{
+    text-decoration: underline;
+}
+.events a::before{
+    padding: 10px;
+    border: 1px solid red;
+    text-decoration: none;
+    color: #578F52;
+    background-color: white;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+footer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg,#1368BB,#1368BB);
+    color: white;
+   
+}
+.footer{
+    align-self: center;
+    padding: 1%;
+    font-size: .8em;
+    text-wrap: wrap;
+    color: white;
+    font-weight: bolder;
+}
+.cw{
+    font-size: .8rem;
+    justify-content: flex-end;
+    color: white;
+}
