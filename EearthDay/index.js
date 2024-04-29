@@ -22,7 +22,7 @@ cw.classList.add('cw')
 p.classList.add('footer')
 footer.innerText=""
 footer.appendChild(p);
-footer.appendChild(cw)
+//footer.appendChild(cw)
 
 var button = document.createElement('Button')
 
