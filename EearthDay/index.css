@@ -107,9 +107,10 @@ ul{
     overflow-x: hidden;
     padding: 2.1em;
     width: fit-content;
-    animation: scroll 20s linear infinite;
-    animation-direction: forward;
+    animation: scroll 20s linear infinite; 
+    animation-direction: forward; 
 }
+
 ul li{
     padding: 1em;
     width: 400px;
@@ -124,10 +125,53 @@ ul li{
     display: flex;
     align-items: flex-end;
     transform: scale(1);
-    
+ 
 }
-ul li:first-child::content{
-    text-align: center;
+ul li:nth-child(1),ul li:nth-child(6) {
+    background: url('img/parralex/recycle-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    justify-content: flex-end;
+    font-size: medium;
+}
+ul li:nth-child(2),ul li:nth-child(7){
+    background: url('img/parralex/clean-up-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    justify-content: flex-end;
+    font-size: medium;
+}
+ul li:nth-child(3),ul li:nth-child(8){
+    background: url('img/parralex/conserve-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    
+    justify-content: flex-end;
+    font-size: medium;
+}
+ul li:nth-child(4),ul li:nth-child(9){
+    background: url('img/parralex/plant-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    justify-content: flex-end;
+    font-size: medium;
+}
+ul li:nth-child(5),ul li:nth-child(10){
+    background: url('img/parralex/earth-day-cutout-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    justify-content: flex-end;
+    font-size: medium;
 }
 ul:hover{
     animation-play-state: paused;
